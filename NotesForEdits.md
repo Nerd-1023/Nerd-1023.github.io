@@ -7,10 +7,10 @@
 * Words escape the div when you zoom out enough. Do icons loop back and make a new line when you add enough (MAKE SURE TO EDIT loadImages.js)
 * Is there a cleaner font to change to? rounded div borders? 
 ### Notes on current state of the site
-* theme/XX_theme_original.png: unedited Minecraft image
-* theme/XX_theme_normal.png: Background outside of boxes (some edits to make it brighter)
-* theme/XX_theme_halfblur.png: Outer box layer (blurred and darker)
-* theme/XX_theme_blur.png: Inner box layer (same blur, even darker)
+* theme/XX_theme_original.jpg: unedited Minecraft image
+* theme/XX_theme_normal.jpg: Background outside of boxes (some edits to make it brighter)
+* theme/XX_theme_halfblur.jpg: Outer box layer (blurred and darker)
+* theme/XX_theme_blur.jpg: Inner box layer (same blur, even darker)
 * icons/icon_X.png: The icons in the inner layer. "STOLEN" watermark and some blur to prevent people from just downloading it, so I can remove the image from the site when it's been taken
 * icons/loadImages.js: Loads all icon images. NumberOfImages is manually set when I add more images.
 * icons/theme_XX.html and icons/index.html (dark theme): The different HTML files for each theme. Could maybe be put into one HTML file with javascript to change themes if possible?
