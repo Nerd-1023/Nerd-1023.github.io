@@ -1,5 +1,5 @@
 var NumberOfImages = 6
-
+ 
 var a = 1;
 while(a < NumberOfImages + 1){ 
 var newImg = document.createElement("img");
