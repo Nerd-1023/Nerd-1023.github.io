@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<head><title>Generate your icons!</title>
+  <style>
+body {background-color: #303030;}
+div {padding:15px}
+a {
+  color: #00A2E8;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #00A2E8;
+  background-color: transparent;
+  text-decoration: underline;
+}
+p {
+  color: white;
+  font-family: verdana;
+  font-size: 100%;
+}
+img {
+  width:100px;
+   height:100px;
+}
+h2 {
+  color: white;
+  font-family: verdana;
+  font-size: 150%;
+}
+</style>
+</head>
+</head>
+<html>
+  <body>
+    <div>
+    <h2>
+      TheKingOfNerds's Icon Generator
+    </h2>
+    <p>
+      Here you can generate non-AI icons for your mod pages!
+    </p>
+
+<div style="background-color:#505050;width:47%;float:left" id="generator">
+<p>Background Color:</p>
+<input type="color" id="background_color"><br>
+<p>Border Color:</p>
+<input type="color" id="border_color"><br>
+<p>Border Size:</p>
+<input type="number" id="border_weight"><br>
+<!--<p>Image File:</p>
+<input type="file" id="image_file_1" name="image_file_1">-->
+</div>
+<div style="background-color:#707070;width:47%;float:right;"><canvas id="canvas"></canvas><br>
+<button onclick="download()">Download Image</button> </div>
+<script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+<script>
+// Development helped by Khan Academy's tutorial https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations/advanced-development-tools/a/using-processingjs-outside-khan-academy
+
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+
+      frameRate(30);
+      draw = function() {
+      size(128 + document.getElementById("border_weight").value * 2, 128 + document.getElementById("border_weight").value * 2); 
+        background(color(unhex(document.getElementById("background_color").value.split("")[1] + document.getElementById("background_color").value.split("")[2]), unhex(document.getElementById("background_color").value.split("")[3] + document.getElementById("background_color").value.split("")[4]), unhex(document.getElementById("background_color").value.split("")[5] + document.getElementById("background_color").value.split("")[6])));
+        stroke(color(unhex(document.getElementById("border_color").value.split("")[1] + document.getElementById("border_color").value.split("")[2]), unhex(document.getElementById("border_color").value.split("")[3] + document.getElementById("border_color").value.split("")[4]), unhex(document.getElementById("border_color").value.split("")[5] + document.getElementById("border_color").value.split("")[6])));
+strokeWeight(document.getElementById("border_weight").value * 2)
+if(document.getElementById("border_weight").value > 0){
+noFill()
+rect(0, 0, 128 + document.getElementById("border_weight").value * 2, 128 + document.getElementById("border_weight").value * 2)}
+
+//if(document.getElementById("image_file_1_img")){
+//var image = document.getElementById("image_file_1_img").value;
+//println(image);
+
+//image.addEventListener("load", (e) => {
+  //document.getElementById("canvas").getContext("2d").drawImage(image, width - 64, height - 64, width + 64, height + 64);
+//});
+//}
+}
+
+
+
+    }};
+  var canvas = document.getElementById("canvas"); 
+  var processingInstance = new Processing(canvas, programCode);
+var download = function() {
+                canvas.toBlob((blob) => {
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = "downloaded_icon.png";
+                    link.click();
+                });
+}
+//image_1 = document.createElement("img")
+//image_1.setAttribute("src",document.getElementById("image_file_1").value)
+//image_1.setAttribute("id", "image_file_1_img");
+</script>
+    </div>
+  </body>
+</html>
