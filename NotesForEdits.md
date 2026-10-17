@@ -1,11 +1,11 @@
 ### Some things that are missing that you may want to try adding:
-[ ] Only one image on screen for the magma and forest themes. Make it fit screen. (not tiled but make sure all the different layers still line up)
-[x] Themes dropdown instead of list of links [replaced with buttons for next/previous theme]
-[x] Formatting could be made better, for example indentation, if you want to fix that
-[x] Improve theme colors?
-[ ] Is wording of the site confusing? [might do some rewording]
-[x] Words escape the div when you zoom out enough. Do icons loop back and make a new line when you add enough (MAKE SURE TO EDIT loadImages.js)
-[x] Is there a cleaner font to change to? rounded div borders? 
+- [ ] Only one image on screen for the magma and forest themes. Make it fit screen. (not tiled but make sure all the different layers still line up)
+- [x] Themes dropdown instead of list of links [replaced with buttons for next/previous theme]
+- [x] Formatting could be made better, for example indentation, if you want to fix that
+- [x] Improve theme colors?
+- [ ] Is wording of the site confusing? [might do some rewording]
+- [x] Words escape the div when you zoom out enough. Do icons loop back and make a new line when you add enough (MAKE SURE TO EDIT loadImages.js)
+- [x] Is there a cleaner font to change to? rounded div borders? 
 ### Notes on current state of the site
 * theme/XX_theme_original.jpg: unedited Minecraft image
 * theme/XX_theme_normal.jpg: Background outside of boxes (some edits to make it brighter)
