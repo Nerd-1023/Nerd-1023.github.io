@@ -1,4 +1,4 @@
-var NumberOfImages = 9
+var NumberOfImages = 10
  
 var a = 1;
 while(a < NumberOfImages + 1){ 
