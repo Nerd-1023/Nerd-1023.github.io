@@ -1,4 +1,4 @@
-var NumberOfImages = 15
+var NumberOfImages = 12
 
 for (let a = 1; a < NumberOfImages + 1; a++){
     let imgCont = document.createElement("div");
