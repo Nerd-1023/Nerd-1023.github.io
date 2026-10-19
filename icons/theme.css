@@ -1,0 +1,69 @@
+/*
+These are the standard color math and generic element rules, separated into a different file to reduce duplication.
+*/
+
+:root {
+    --priH: 200;
+    --priS: 40%;
+    --priV: 80%;
+
+    --pri: hsl(var(--priH), var(--priS), var(--priV));
+    --sec: hsl(var(--priH), calc(var(--priS) * 0.3), var(--priV));
+    --secT: hsla(var(--priH), calc(var(--priS) * 0.3), var(--priV), 50%);
+    --conT: hsla(var(--priH), calc(var(--priS) * 0.5), 5%, 75%);
+    --conO: hsl(var(--priH), calc(var(--priS) * 0.7), 10%);
+}
+* {
+    transition: all, 200ms;
+}
+#page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Segoe UI Light","sans-serif";
+    color: var(--sec);
+    transition: all, 0.5s;
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+body {
+    background:var(--conO);
+}
+button {
+    background:var(--conO);
+    border-radius: 20px;
+    padding: 10px;
+    border:none;
+    cursor: pointer;
+    color: var(--sec);
+}
+button:hover{
+    color: var(--pri);
+    font-weight: bold;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+button:active {
+
+    transform: scale(1.3);
+}
+a {
+    color: var(--sec);
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover{
+    color: var(--pri);
+    text-decoration: var(--pri);
+    text-decoration-line: underline;
+}
+::-webkit-scrollbar {
+    background: var(--conT);
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--pri);
+    border-radius: 20px;
+}

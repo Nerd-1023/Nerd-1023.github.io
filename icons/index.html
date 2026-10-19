@@ -1,46 +1,150 @@
 <!DOCTYPE html>
-<head><title>Free Mod Icons</title>
-  <style>
-body {background-color: #303030;}
-div {padding:15px}
-a {
-  color: #00A2E8;
-  background-color: transparent;
-  text-decoration: none;
-}
-a:hover {
-  color: #00A2E8;
-  background-color: transparent;
-  text-decoration: underline;
-}
-p {
-  color: white;
-  font-family: verdana;
-  font-size: 100%;
-}
-img {
-  width:100px;
-   height:100px;
-}
-h2 {
-  color: white;
-  font-family: verdana;
-  font-size: 150%;
-}
-</style>
+
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link href="../icons/theme.css" rel="stylesheet">
+    <style>
+        #right, #main_text, #footer {
+          background-color: var(--conT);
+          backdrop-filter: blur(20px);
+        }
+        #left {
+            position: absolute;
+            top: 5%;
+            left: 1%;
+            width: 37.5%;
+            height: 94%;
+            display: block;
+        }
+
+        #footer {
+            align-content: center;
+            text-align: center;
+            height: 10%;
+            border-radius: 20px;
+        }
+
+        #credit {
+            text-align: center;
+            margin: 2%;
+            color: var(--secT);
+        }
+
+        #header {
+            color: var(--pri);
+            font-size: 40px;
+            text-align: center;
+        }
+
+        #main_text {
+            height: 55%;
+            overflow-y: auto;
+            text-align: center;
+            font-size: 20px;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+
+        #right {
+            position: absolute;
+            top: 5%;
+            left: 39%;
+            width: 60%;
+            height: 90%;
+            display: block;
+            border-radius: 20px;
+            overflow-y: auto;
+        }
+
+        .icon_container {
+            margin: 10px;
+            background: var(--conO);
+            width: 100px;
+            height: 100px;
+            display: inline-grid;
+            border-radius: 10px;
+        }
+
+        .icon_container:hover {
+            transform: scale(1.5);
+            box-shadow: 0px 20px 20px 20px var(--conT);
+        }
+
+        .icon {
+            margin: 10%;
+            width: 80%;
+            height: 80%;
+        }
+
+        #icons {
+            padding: 20px;
+
+        }
+        .icon_label {
+            text-align: center;
+            opacity: 0;
+            pointer-events: none;
+        }
+        @media (max-width: 768px) {
+            #footer {
+                padding: 20px;
+            }
+            #left {
+                width: 100%;
+                position: static;
+                height: fit-content;
+            }
+            #main_text {
+                height: fit-content;
+            }
+            #right {
+                width: 100%;
+                position: static;
+            }
+        }
+
+
+
+    </style>
+    <title>TheKingOfNerds Icons</title>
+
 </head>
-<html>
-  <body>
-    <div>
-    <h2>
-      TheKingOfNerds's Icons | <a href="theme_forest.html">Forest Theme</a> <a href="theme_magma.html">Magma Theme</a> <a href="theme_light.html">Light Theme</a>
+
+<body>
+<div id="page">
+<noscript>
+  JavaSript is not enabled, or is failing to operate on your client, which will limit site functionality.
+</noscript>
+<div id ="left">
+
+    <h2 id="header">
+        TheKingOfNerds's Icons
     </h2>
-    <p>
-      These are NOT the final icons. Don't steal them or download them off this site. Please ask me (@nerdking332 on Discord if I'm in a mutual server or <a href="https://discord.gg/sWSUHubyHD">this Discord server</a> if not) if you would like an icon, with a screenshot of the specific icon you chose from the website. I will give you the original file.<br><br> Icons are completely free, and you have permission to edit or use them after you ask for them. The reason you can't use the icons that are here is so many people don't end up with the same icon. Once you have the original version, feel free to share it with others or use it in any way you'd like.<br><br> My goal: to help people replace their AI-generated mod icons with human-made icons that look better and follow <a href="https://modrinth.com/legal/rules#prohibited-usage-of-ai">Modrinth's content rules</a>.
+    <p id="main_text">
+        Here are icons that I have made. Please ask me (<a href="https://discord.com/users/1354638320939958394">@nerdking332</a> on Discord) in a mutual server or <a href="https://discord.gg/sWSUHubyHD">my Discord server</a>) if
+        you would like an icon, with a screenshot of the specific icon you chose from the website. I will give you the
+        original file.<br><br> My
+        goal: to help people replace their AI-generated mod icons with human-made icons that look better and follow <a
+            href="https://modrinth.com/legal/rules#prohibited-usage-of-ai">Modrinth's content rules</a>.
+        <br><br>
+        The icon previews on this site are watermarked and cannot be used in any scenario outside of asking for the original version. The full icons are licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a>, meaning you may use the icons for whatever you want, as long as you give sufficient credit.
     </p>
-<div style="background-color:#505050;" id="icons">
+  <div id="footer">
+    <button id="theme_<"><</button>
+    Theme: <span id="theme_text">Who knows?</span>
+    <button id="theme_>">></button>
+  </div>
+
+    <div id="credit">Website design & development assisted by <a href="https://github.com/johnseagull3326">@JohnSeagull3326</a></div>
 </div>
+<div id="right">
+  <div id="icons"></div>
+</div>
+</div>
+</body>
+
+<script src="themes.js"></script>
 <script src="loadImages.js"></script>
-    </div>
-  </body>
 </html>
