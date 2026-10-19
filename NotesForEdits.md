@@ -12,7 +12,7 @@
 * theme/XX_theme_halfblur.jpg: Outer box layer (blurred and darker)
 * theme/XX_theme_blur.jpg: Inner box layer (same blur, even darker)
 * icons/icon_X.png: The icons in the inner layer. "STOLEN" watermark and some blur to prevent people from just downloading it, so I can remove the image from the site when it's been taken
-* icons/loadIcons.js: Loads all icon images. NumberOfImages is manually set when I add more images.
+* icons/loadimages.js: Loads all icon images. NumberOfImages is manually set when I add more images.
 * icons/theme_XX.html and icons/index.html (dark theme): The different HTML files for each theme. Could maybe be put into one HTML file with javascript to change themes if possible?
 * Themes:
   * Forest: https://modrinth.com/datapack/better-forest-biome

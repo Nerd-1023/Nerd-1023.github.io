@@ -31,13 +31,14 @@ document.getElementById("theme_>").addEventListener("click",()=>{
     updateTheme()
 })
 function imageTheme () {
+    genericTheme()
     page.style.setProperty("background-image","url('../theme/"+themes[themeID].url+"')")
 }
 function genericTheme () {
-    page.style.setProperty("background-color","var(--conO)")
+    page.style.setProperty("background-image","none")
 }
 function rgbTheme() {
-    page.style.setProperty("background-color","var(--conO)")
+    genericTheme()
     rgbHue = themes[1].hue;
     rgb = setInterval(() => {
         rgbHue -=10;
